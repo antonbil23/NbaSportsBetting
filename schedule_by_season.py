@@ -1,4 +1,5 @@
 import sys
+import os
 import pandas as pd
 from basketball_reference_scraper.seasons import get_schedule
 from basketball_reference_scraper.box_scores import get_box_scores
@@ -73,9 +74,9 @@ team_abbreviations = {
     "WATERLOO HAWKS": "WAT",
     "SAN DIEGO ROCKETS": "SDR"
 }
-
-year = int(sys.argv[1])
-# get_schedule(year, playoffs=False).to_csv(f"schedule_{year}.csv", sep=',', index=False, encoding='utf-8')
+# Define the directory
+directory = "./schedule"
+# year = int(sys.argv[1])
 
 def create_game_files(year):
     df = pd.read_csv(f"schedule_{year}.csv")
@@ -128,6 +129,14 @@ def create_game_files(year):
 
         # combined_df.to_csv(f"combined_{year}.csv", sep=',', index=False, encoding='utf-8')
         total_df = pd.concat([total_df, combined_df], ignore_index=True)
-    total_df.to_csv(f"combined_{year}.csv", sep=',', index=False, encoding='utf-8')
+    total_df.to_csv(f"{directory}/combined_{year}.csv", sep=',', index=False, encoding='utf-8')
 
-create_game_files(year)
+# Gio, change years to be (2018,2024)
+# haven't tested this yet, but if teams are printing out then you're good
+for year in range(2013, 2018):
+    # directory is defined at the top of the script
+    # Check if the directory exists, and create it if it does not
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    get_schedule(year, playoffs=False).to_csv(f"schedule_{year}.csv", sep=',', index=False, encoding='utf-8')
+    create_game_files(year)
