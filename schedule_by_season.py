@@ -90,7 +90,14 @@ def create_game_files(year):
         away = team_abbreviations[row['VISITOR'].upper()]
         home = team_abbreviations[row['HOME'].upper()]
         print(home)
-        d = get_box_scores(date, away, home)
+        try:
+            d = get_box_scores(date, away, home)
+        except:
+            error_message = f"Error getting box scores for {away} at {home} on {date}"
+            print(error_message)
+            with open("error_log.txt", "a") as file:
+                file.write(error_message + "\n")
+            continue
         # d[away].to_csv(f"{away}_{date}.csv", sep=',', index=False, encoding='utf-8')
         # d[home].to_csv(f"{home}_{date}.csv", sep=',', index=False, encoding='utf-8')
         df_away = d[away]
