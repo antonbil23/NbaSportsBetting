@@ -140,10 +140,18 @@ def create_game_files(year):
 
 # Gio, change years to be (2018,2024)
 # haven't tested this yet, but if teams are printing out then you're good
-for year in range(2013, 2018):
+for year in range(2024, 2025):
     # directory is defined at the top of the script
     # Check if the directory exists, and create it if it does not
     if not os.path.exists(directory):
         os.makedirs(directory)
-    get_schedule(year, playoffs=False).to_csv(f"schedule_{year}.csv", sep=',', index=False, encoding='utf-8')
+    
+    try:
+        get_schedule(year, playoffs=False).to_csv(f"schedule_{year}.csv", sep=',', index=False, encoding='utf-8')
+    except:
+        error_message = f"Error getting schedule for {year}"
+        print(error_message)
+        with open("error_log.txt", "a") as file:
+            file.write(error_message + "\n")
+        continue
     create_game_files(year)
