@@ -140,7 +140,7 @@ def create_game_files(year):
 
 # Gio, change years to be (2018,2024)
 # haven't tested this yet, but if teams are printing out then you're good
-for year in range(2024, 2025):
+for year in range(2023, 2024):
     # directory is defined at the top of the script
     # Check if the directory exists, and create it if it does not
     if not os.path.exists(directory):

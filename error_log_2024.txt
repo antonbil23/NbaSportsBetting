@@ -1,0 +1,12 @@
+Error getting box scores for DEN at SAC on 2024-02-09
+Error getting box scores for OKC at DAL on 2024-02-10
+Error getting box scores for NYK at CLE on 2024-03-03
+Error getting box scores for WAS at UTA on 2024-03-04
+Error getting box scores for ATL at NYK on 2024-03-05
+Error getting box scores for NOP at TOR on 2024-03-05
+Error getting box scores for POR at MIA on 2024-03-29
+Error getting box scores for SAC at NOP on 2024-04-19
+Error getting box scores for ORL at CLE on 2024-04-20
+Error getting box scores for PHO at MIN on 2024-04-20
+Error getting box scores for DAL at LAC on 2024-04-21
+Error getting box scores for IND at MIL on 2024-04-21
