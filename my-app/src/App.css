@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+  background-color: #1b1d1e;
+}
+
+.App.shifted {
+  margin-left: 250px;
+}
+
+.NBA-logo {
+  height:20vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  } */
+  
+}
+
+
+.Home-header {
+  padding-top: 3%;
+  color: aliceblue;
+  font-size: calc(25px + 3vmin);
+}
+
+.authors {
+  padding-top: 2%;
+  color: aliceblue;
+  font-size: calc(7px + 1.5vmin);
+}
+
+.title {
+  padding-top: 2%;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* Container to hold the sidebar and content */
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+  position: relative;
+}
+
+/* Style for the hamburger icon */
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+.line {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* Style for the navigation menu */
+.menu {
+  width: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #f1f1f1;
+  transition: width 0.3s;
+  z-index: 1000;
+
+  /* Centering using Flexbox */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.menu.open {
+  width: 250px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 8px 16px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Style for the main content */
+.main-content {
+  flex: 1;
+  transition: margin-left 0.3s;
+}
+
+.main-content.shifted {
+  margin-left: 250px;
+}
