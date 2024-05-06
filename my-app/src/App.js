@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import ToggleMenu from './toggle';
+import Home from './pages/Home';
+import PDF from './pages/PDF';
 import NotFound from './pages/NotFound';
 
 import './App.css';
@@ -8,9 +10,10 @@ import './App.css';
 function App() {
     return (
       <Router>
+        <ToggleMenu />
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/*" element={<ToggleMenu/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/pdf" element={<PDF />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

@@ -5,7 +5,7 @@ import '../App.css';
 function Slides() {
     return (
     <div className="App">
-        <ToggleMenu />
+        {/* <ToggleMenu /> */}
         <h1>Slides Page</h1>
     </div>
     );

@@ -5,7 +5,7 @@ import '../App.css';
 function PDF() {
     return (
     <div className="App">
-        <ToggleMenu />
+        {/* <ToggleMenu /> */}
         <h1>PDF Page</h1>
     </div>);
 }
