@@ -76,7 +76,6 @@ team_abbreviations = {
 }
 # Define the directory
 directory = "./schedule"
-# year = int(sys.argv[1])
 
 def create_game_files(year):
     df = pd.read_csv(f"schedule_{year}.csv")
@@ -98,8 +97,7 @@ def create_game_files(year):
             with open("error_log.txt", "a") as file:
                 file.write(error_message + "\n")
             continue
-        # d[away].to_csv(f"{away}_{date}.csv", sep=',', index=False, encoding='utf-8')
-        # d[home].to_csv(f"{home}_{date}.csv", sep=',', index=False, encoding='utf-8')
+
         df_away = d[away]
         df_home = d[home]
 
@@ -134,7 +132,6 @@ def create_game_files(year):
         combined_df.loc[1] = combined_row
         combined_df = combined_df.drop(2)
 
-        # combined_df.to_csv(f"combined_{year}.csv", sep=',', index=False, encoding='utf-8')
         total_df = pd.concat([total_df, combined_df], ignore_index=True)
     total_df.to_csv(f"{directory}/combined_{year}.csv", sep=',', index=False, encoding='utf-8')
 

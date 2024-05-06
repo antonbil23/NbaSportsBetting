@@ -7,6 +7,7 @@ from selenium.common.exceptions import TimeoutException
 
 # We will be using code from https://colab.research.google.com/drive/1STvYH8iwru1xHe3uT1oUPjwPN8Qgv7mP?authuser=1#scrollTo=5vYU1bQQIid1
 # for the gathering 2024 season odds
+# Created by Gio Romero-Ruiz
 import time
 
 
@@ -34,7 +35,7 @@ referenceTable = {
     "WSH" : "WAS"
 }
 
-# Define retry function
+# Define retry function just in case the user loses connection when running the program
 def get_with_retry(driver, url, max_retries=8, delay=10):
     retries = 0
     while retries < max_retries:
@@ -65,7 +66,7 @@ def getGames():
 
         url= "https://www.espn.com/nba/boxscore/_/gameId/" + str(i)
 
-        # chrome_options = Options()
+        # use selenium to webscrabe the odds
         options = webdriver.ChromeOptions()
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--headless")
@@ -83,7 +84,7 @@ def getGames():
 
         g = getOdds(soup)
 
-        # this will print out the gameId ranges idk why but it does
+        # this will print out the valid gameId ranges
         if g != None:
             if not checker:
                 print('[', i)
@@ -140,7 +141,6 @@ def getOdds(soup):
     if fav is None:
         fav = l[0]
 
-    line_string = fav + " " + l[1]
 
     # Formats overunder
     if float(overunder[1]) % 1 == 0:
@@ -151,7 +151,7 @@ def getOdds(soup):
     return ([date_string, a, h, fav, l[1], o])
 
 
-
+# Gets the odds of the 2023-2024 Season
 def getOddsToCsv():
     games = getGames()
     games_lines_df = pd.DataFrame(games)

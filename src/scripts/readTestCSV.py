@@ -1,4 +1,5 @@
 import pandas as pd
+# Created by Rahul Aneja
 # Read the CSV file
 df = pd.read_csv('https://raw.githubusercontent.com/dcsteph7/Data-Capstone/main/nba_games1.csv', index_col=0)
 
