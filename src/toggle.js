@@ -29,14 +29,14 @@ function ToggleMenu() {
                     </ul>
                 </nav>
             </div>
-            <div className={`main-content ${isOpen ? 'shifted' : ''}`}>
+            {/* <div className={`main-content ${isOpen ? 'shifted' : ''}`}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/pdf" element={<PDF />} />
                     <Route path="/slides" element={<Slides />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-            </div>
+            </div> */}
         </div>
     );
 }

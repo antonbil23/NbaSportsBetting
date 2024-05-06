@@ -1,12 +1,10 @@
 import React from 'react';
 import '../App.css';
 import logo from '../nba-logo.png';
-import ToggleMenu from '../toggle.js';
 
-function App() {
+function Home() {
   return (
     <div className="App">
-      <ToggleMenu />
       <div className="Home-header">
         <div>
         <img src={logo} className="NBA-logo" alt="Nba Logostyle" />
@@ -42,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
