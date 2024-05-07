@@ -1,45 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import ToggleMenu from './toggle';
+import Home from './pages/Home';
+import PDF from './pages/PDF';
+import Slides from './pages/Slides'
+import NotFound from './pages/NotFound';
+
 import './App.css';
-import logo from './nba-logo.png';
-import ToggleMenu from './toggle.js';
 
 function App() {
-  return (
-    <div className="App">
-      <ToggleMenu />
-      <div className="Home-header">
-        <div>
-        <img src={logo} className="NBA-logo" alt="Nba Logostyle" />
-        </div>
-        <div className="title">
-        NBA Sports Betting Prediction Model
-        </div>
-      </div>
-      
-      <div className="authors">
-                By: 
-                <a className="App-link" href="https://www.linkedin.com/in/rahul-aneja-746ba5207/"> Rahul Aneja</a>, 
-                <a className="App-link" href="https://www.linkedin.com/in/gioromruiz/"> Gio Romero-Ruiz</a>, 
-                <a className="App-link" href="https://www.linkedin.com/in/antonbilonog/"> Anton Bilonog</a>
-            </div>
-
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-
-    </div>
-  );
+    return (
+      <Router>
+        <ToggleMenu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pdf" element={<PDF />} />
+          <Route path="/slides" element={<Slides />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    );
 }
 
 export default App;

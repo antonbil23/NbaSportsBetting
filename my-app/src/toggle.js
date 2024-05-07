@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import PDF from './pages/PDF';
+import Slides from './pages/Slides';
+import NotFound from './pages/NotFound';
 import './App.css';
 
 function ToggleMenu() {
@@ -18,17 +23,26 @@ function ToggleMenu() {
                 </div>
                 <nav className={`menu ${isOpen ? 'open' : ''}`}>
                     <ul>
-                        <li><a href="#pdf">PDF</a></li>
-                        <li><a href="#slides">Slides</a></li>
-                        <li><a href="#code">Code</a></li>
-                        <li><a href="#history">History</a></li>
+                        <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
+                        <li><Link to="/pdf" onClick={toggleMenu}>PDF</Link></li>
+                        <li><Link to="/slides" onClick={toggleMenu}>Slides</Link></li>
+                        <li>
+                            <a href="https://github.com/antonbil23/NbaSportsBetting" target="_blank" rel="noopener noreferrer">
+                                Code
+                            </a>
+                        </li>
+
                     </ul>
                 </nav>
             </div>
             {/* <div className={`main-content ${isOpen ? 'shifted' : ''}`}>
-                <h1>Main Content</h1>
-                {/* other content */}
-             
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/pdf" element={<PDF />} />
+                    <Route path="/slides" element={<Slides />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </div> */}
         </div>
     );
 }
