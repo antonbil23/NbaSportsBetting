@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/NbaSportsBetting/static/css/main.758fb0a9.css",
+    "main.js": "/NbaSportsBetting/static/js/main.2afa6aa0.js",
+    "static/js/453.ed3810f9.chunk.js": "/NbaSportsBetting/static/js/453.ed3810f9.chunk.js",
+    "static/media/nba-logo.png": "/NbaSportsBetting/static/media/nba-logo.fb65b6aa3a203cca2dd7.png",
+    "index.html": "/NbaSportsBetting/index.html",
+    "main.758fb0a9.css.map": "/NbaSportsBetting/static/css/main.758fb0a9.css.map",
+    "main.2afa6aa0.js.map": "/NbaSportsBetting/static/js/main.2afa6aa0.js.map",
+    "453.ed3810f9.chunk.js.map": "/NbaSportsBetting/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.758fb0a9.css",
+    "static/js/main.2afa6aa0.js"
+  ]
+}
