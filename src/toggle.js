@@ -26,6 +26,12 @@ function ToggleMenu() {
                         <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
                         <li><Link to="/pdf" onClick={toggleMenu}>PDF</Link></li>
                         <li><Link to="/slides" onClick={toggleMenu}>Slides</Link></li>
+                        <li>
+                            <a href="https://github.com/antonbil23/NbaSportsBetting" target="_blank" rel="noopener noreferrer">
+                                Code
+                            </a>
+                        </li>
+
                     </ul>
                 </nav>
             </div>
