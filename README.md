@@ -2,7 +2,9 @@
 
 Authors: Rahul Aneja, Anton Bilonog, Gio Romero-Ruiz
 
-Our NbaSportBetting project is aimed to analyze and explore techniques from a previous project employed by a group in Spring 2023, with sports betting becoming an increasingly popular trend, there is significant potential for it to be lucrative over time for those who apply the right strategies. Our objective of our project is to be able to use these previous techniques and strategies and improve upon them to predict wins and losses for the current 2023-2024 NBA season.
+Our project is about NBA sports betting and the primary goal is to examine and understand the machine learning strategies used by a group in their Spring 2023 titled “Machine Learning in Sports Betting (NBA)”. With sports betting becoming an increasingly popular trend, there is significant potential for it to be lucrative over time for those who apply the right strategies.
+Our primary goal is to critically analyze the methodologies employed, assess the reproducibility of the results using the latest models, and explore potential improvements. The broader aim is to contribute to the evolving field of sports analytics by enhancing the predictive capabilities of machine learning models in sports betting, thereby helping bettors make more informed decisions and potentially increase their profitability. This study not only seeks to validate earlier findings but also aims to refine the models to adapt to changes in data and betting landscapes in the ongoing NBA seasons.
+
 
 Here is our NbaSportsBetting project, in our repository you will have access to four different folders, the "data" folder, the "src" which has folders like "models" and "scripts" and our main file cs4824.ipynb. All of the data is in our github repository so for someone to run our code all you have to do is go to cs4824.ipynb and hit "Run All" if that does not work please make sure you have all the libraries and extensions installed which could cause errors in running the code.
 
